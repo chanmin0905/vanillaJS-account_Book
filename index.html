@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- Swiper from CDN -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Chartjs from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="./style.css" />
@@ -20,166 +20,280 @@
     <title>Account</title>
   </head>
   <body>
-    <div class="app-wrapper">
-      <div class="app-container">
-        <!-- StatusBar -->
-        <div class="mobile_statusBar">
-          <span class="time">11:58</span>
-          <span class="material-symbols-outlined"> signal_cellular_alt </span>
-          <span class="material-symbols-outlined"> wifi </span>
-          <span class="material-symbols-outlined"> battery_full_alt </span>
-        </div>
-
-        <!-- Header -->
-        <header>
-          <div class="profile_container">
-            <a href="/">
-              <img src="./src/profile.png" alt="profile" />
-            </a>
-          </div>
-          <h3>생 활 비</h3>
-          <ul class="icon-container">
-            <li>
-              <a href="/">
-                <img src="./src/payment_Icon.png" alt="Payment" />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <img src="./src/search_Icon.png" alt="Search" />
-              </a>
-            </li>
-          </ul>
-        </header>
-
-        <!-- MAIN -->
-        <main>
-          <!-- account_status -->
-          <div class="account_status">
-            <div class="account_container">
-              <div class="account">
-                <div>355-673877-78773</div>
-                <a href="#">이체</a>
+    <div class="app">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <!-- Mobile_StatusBar -->
+            <div class="mobile_statusBar">
+              <div class="time">11:58</div>
+              <div class="symbols">
+                <span class="material-symbols-outlined"> signal_cellular_alt </span>
+                <span class="material-symbols-outlined"> wifi </span>
+                <span class="material-symbols-outlined"> battery_full_alt </span>
               </div>
-              <div class="balance">
-                <h2>1,240,000</h2>
-                <span>원</span>
-              </div>
-              <div class="progress">
-                <div>진행상태</div>
-                <a href="#">
-                  <img src="./src/mdi_bar_chart.png" alt="chart" />
+            </div>
+
+            <!-- Header -->
+            <header>
+              <div class="profile_container">
+                <a href="/">
+                  <img src="./src/profile.png" alt="profile" />
                 </a>
               </div>
-              <div class="period">
-                <span>5일 동안, 210,000원 남음</span>
-              </div>
-            </div>
-            <div class="ad">
-              <span>지금 낮은 이자로 생활 대출을 신청하세요! </span>
-              <a href="#">Go</a>
-            </div>
-          </div>
+              <h3>생 활 비</h3>
+              <ul class="icon-container">
+                <li>
+                  <a href="/">
+                    <img src="./src/payment_Icon.png" alt="Payment" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <img src="./src/search_Icon.png" alt="Search" />
+                  </a>
+                </li>
+              </ul>
+            </header>
 
-          <!-- account_history -->
-          <!-- <div class="account_history">
-            <div class="save_status">
-              <div class="save_List">
-                <div class="save_title">여행가자</div>
-                <div class="save_balance">842,200원</div>
-              </div>
-              <div class="save_List">
-                <div class="save_title">여행가자</div>
-                <div class="save_balance">842,200원</div>
-              </div>
-            </div>
-
-            <!-- <div class="expend_container">
-                <div class="expend_day">
-                  <div class="day_today">
-                    <ul>
-                      <li>미스터피자</li>
-                      <span>32,000</span>
-
-                      <li>택시</li>
-                      <span>9,800</span>
-
-                      <li>스타벅스</li>
-                      <span>29,000</span>
-
-                      <li>전길수</li>
-                      <span>59,000</span>
-                    </ul>
+            <!-- MAIN -->
+            <main>
+              <!-- account_status -->
+              <div class="account_status">
+                <div class="account_container">
+                  <div class="account">
+                    <div>355-673877-78773</div>
+                    <a href="#">이체</a>
                   </div>
-
-                  <div class="day_yesterday">
-                    <ul>
-                      <li>미스터피자</li>
-                      <span>32,000</span>
-
-                      <li>택시</li>
-                      <span>9,800</span>
-
-                      <li>스타벅스</li>
-                      <span>29,000</span>
-
-                      <li>전길수</li>
-                      <span>59,000</span>
-                    </ul>
+                  <div class="balance">
+                    <h2>1,240,000</h2>
+                    <span>원</span>
+                  </div>
+                  <div class="progress">
+                    <div>진행상태</div>
+                    <a href="./spend-page.html" target="_blank">
+                      <img src="./src/mdi_bar_chart.png" alt="chart" class="chart_Btn" />
+                    </a>
+                  </div>
+                  <div class="period">
+                    <span>5일 동안, 210,000원 남음</span>
                   </div>
                 </div>
-              </div> -->
-          <!-- </div> -->
-        </main>
-        <!-- Nav -->
-        <nav>
-          <div class="nav_container">
-            <div>
-              <a href="" class="homeLink">
-                <img src="./src/nav_homeIcon.png" alt="HOME" />
-              </a>
-            </div>
-            <div>
-              <a href="" class="switchLink">
-                <img src="./src/nav_switchIcon.png" alt="SWITCH" />
-              </a>
-            </div>
-            <div>
-              <a href="" class="commentLink">
-                <img src="./src/nav_messageIcon.png" alt="MESSAGE" />
-              </a>
-            </div>
-            <div>
-              <a href="" class="moreLink">
-                <img src="./src/nav_moreIcon.png" alt="MORE" />
-              </a>
-            </div>
+                <div class="ad">
+                  <span>지금 낮은 이자로 생활 대출을 신청하세요! </span>
+                  <a href="#">Go</a>
+                </div>
+              </div>
+
+              <!-- account_history -->
+              <div class="account_history">
+                <div class="history_container">
+                  <div class="history_line">
+                    <img src="./src/line.png" alt="HISTORY_LINE" class="click_Btn" />
+                  </div>
+
+                  <!-- Saving Money -->
+                  <div class="history_views account">
+                    <div class="save_status">
+                      <div class="save_lists">
+                        <span>여행가자</span>
+                        <span>842,000</span>
+                      </div>
+
+                      <div class="save_lists">
+                        <span>여행가자</span>
+                        <span>842,000</span>
+                      </div>
+
+                      <div class="new_lists">
+                        <button>+</button>
+                        <div>새로 만들기</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Spend List -->
+                  <div class="history_views spend">
+                    <div class="spend_status">
+                      <!-- <div class="spend_list">
+                        <div class="title">
+                          <span class="day">오늘</span>
+                          <span class="total">110,000 지출</span>
+                        </div>
+                        <div class="items">
+                          <span class="item">미스터피자</span>
+                          <span class="price">25,000원</span>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <!-- Nav -->
+            <nav>
+              <div class="nav_container">
+                <div>
+                  <a href="" class="homeLink">
+                    <img src="./src/nav_homeIcon.png" alt="HOME" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="switchLink">
+                    <img src="./src/nav_switchIcon.png" alt="SWITCH" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="commentLink">
+                    <img src="./src/nav_messageIcon.png" alt="MESSAGE" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="moreLink">
+                    <img src="./src/nav_moreIcon.png" alt="MORE" />
+                  </a>
+                </div>
+              </div>
+            </nav>
           </div>
-        </nav>
+
+          <div class="swiper-slide">
+            <!-- Mobile_StatusBar -->
+            <div class="mobile_statusBar">
+              <span class="time">11:58</span>
+              <span class="material-symbols-outlined"> signal_cellular_alt </span>
+              <span class="material-symbols-outlined"> wifi </span>
+              <span class="material-symbols-outlined"> battery_full_alt </span>
+            </div>
+
+            <!-- Header -->
+            <header>
+              <div class="profile_container">
+                <a href="/">
+                  <img src="./src/profile.png" alt="profile" />
+                </a>
+              </div>
+              <h3>의민이 용돈</h3>
+              <ul class="icon-container">
+                <li>
+                  <a href="/">
+                    <img src="./src/payment_Icon.png" alt="Payment" />
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <img src="./src/search_Icon.png" alt="Search" />
+                  </a>
+                </li>
+              </ul>
+            </header>
+
+            <!-- MAIN -->
+            <main>
+              <!-- account_status -->
+              <div class="account_status">
+                <div class="account_container">
+                  <div class="account">
+                    <div>355-673877-78773</div>
+                    <a href="#">이체</a>
+                  </div>
+                  <div class="balance">
+                    <h2>1,240,000</h2>
+                    <span>원</span>
+                  </div>
+                  <div class="progress">
+                    <div>진행상태</div>
+                    <a href="./spend-page.html" target="_blank">
+                      <img src="./src/mdi_bar_chart.png" alt="chart" class="chart_Btn" />
+                    </a>
+                  </div>
+                  <div class="period">
+                    <span>5일 동안, 210,000원 남음</span>
+                  </div>
+                </div>
+                <div class="ad">
+                  <span>지금 낮은 이자로 생활 대출을 신청하세요! </span>
+                  <a href="#">Go</a>
+                </div>
+              </div>
+
+              <!-- account_history -->
+              <div class="account_history">
+                <div class="history_container">
+                  <div class="history_line">
+                    <img src="./src/line.png" alt="HISTORY_LINE" class="click_Btn" />
+                  </div>
+
+                  <!-- Saving Money -->
+                  <div class="history_views">
+                    <div class="save_status">
+                      <div class="save_lists">
+                        <span>여행가자</span>
+                        <span>842,000</span>
+                      </div>
+
+                      <div class="save_lists">
+                        <span>여행가자</span>
+                        <span>842,000</span>
+                      </div>
+
+                      <div class="new_lists">
+                        <button>+</button>
+                        <div>새로 만들기</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Spend List -->
+                  <div class="history_views">
+                    <div class="spend_status"></div>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <!-- Nav -->
+            <nav>
+              <div class="nav_container">
+                <div>
+                  <a href="" class="homeLink">
+                    <img src="./src/nav_homeIcon.png" alt="HOME" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="switchLink">
+                    <img src="./src/nav_switchIcon.png" alt="SWITCH" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="commentLink">
+                    <img src="./src/nav_messageIcon.png" alt="MESSAGE" />
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="moreLink">
+                    <img src="./src/nav_moreIcon.png" alt="MORE" />
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
       </div>
     </div>
 
-    <!-- Slider main container -->
-    <!-- <div class="swiper"> -->
-    <!-- Additional required wrapper -->
-    <!-- <div class="swiper-wrapper">
-        Slides
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-      </div> -->
-    <!-- If we need pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
-
-    <!-- If we need navigation buttons -->
-    <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
-
-    <!-- If we need scrollbar -->
-    <!-- <div class="swiper-scrollbar"></div> -->
-    <!-- </div> -->
-
-    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./main.js"></script> -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

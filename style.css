@@ -3,8 +3,11 @@
   margin: 0px;
   padding: 0px;
 }
+li {
+  list-style: none;
+}
 
-.app-wrapper {
+.app {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +15,11 @@
   background-color: gray;
 }
 
-.app-container {
-  width: 360px;
-  height: 650px;
+.swiper {
+  width: 375px;
+  height: 812px;
   border-radius: 10px;
-  background-color: beige;
+  background-color: #eeece5;
   text-align: center;
 
   position: relative;
@@ -26,16 +29,21 @@
 /* ------------------------------------- */
 
 .mobile_statusBar {
-  margin: 10px;
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Header */
 /* ------------------------------------- */
 
 header {
-  /* margin: 10px auto; */
+  margin: 0 auto;
+  width: 327px;
+  height: 43px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   /* line-height: 1; */
 }
@@ -53,7 +61,7 @@ header {
 }
 
 header h3 {
-  margin: 0 60px;
+  margin: 0 30px;
 }
 
 .icon-container {
@@ -68,31 +76,31 @@ header h3 {
 }
 
 /* Main */
+/* Main - Status */
 /* ------------------------------------- */
 
 main {
+  width: 375px;
   margin: 10px auto;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-
+  align-items: center; */
   /* background-color: black; */
 }
 
 .account_status {
-  width: 100%;
-
-  /* background-color: red; */
-}
-
-.account_status div {
-  margin: 10px 20px;
+  /* height: 0px; */
 }
 
 .account_container {
-  padding: 5px;
+  margin: 10px 48px;
   background-color: white;
   border-radius: 10px;
+  overflow: auto;
+}
+
+.account_container > div {
+  margin: 10px auto;
 }
 
 .account > div {
@@ -120,19 +128,107 @@ main {
 }
 
 .ad {
-  height: 15px;
-  font-size: 12px;
-  margin-bottom: 0px;
+  margin: 0 48px;
+  font-size: 14px;
+  font-weight: 600;
+
   /* background-color: red; */
 }
 
-.ad span {
-  margin-right: 5px;
-}
+/* Main - History */
+/* ------------------------------------- */
 
 .account_history {
-  height: auto;
+  margin: 10px auto;
+
+  /* border: 1px solid black; */
+}
+
+.account_history .history_container {
+  margin: 10px 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.history_container .history_views {
+  margin: 0 20px;
+  overflow: auto;
+
   /* background-color: red; */
+  /* border: 1px solid red; */
+}
+
+.history_views .save_status {
+  width: max-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  /* border: 1px solid black; */
+}
+
+.save_status .save_lists {
+  margin: 5px 5px;
+  width: 160px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.save_status .save_lists > span {
+  display: block;
+}
+
+.save_status .new_lists {
+  width: max-content;
+  margin: 5px 5px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.save_status .new_lists button {
+  margin: 0 5px;
+  /* border-style: none; */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 10px;
+}
+
+.save_status .new_lists div {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spend  */
+
+.history_views .spend_status {
+  margin: 0 auto;
+  height: max-content;
+  /* border: 1px solid black; */
+}
+
+.history_views .spend_list {
+  border: 1px solid red;
+}
+
+.history_views .spend_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spend_title .day {
+  display: inline-block;
+}
+
+.history_views .spend_itmes {
 }
 
 /* Nav */
@@ -155,14 +251,6 @@ nav .nav_container {
   justify-content: space-around;
   align-items: center;
 }
-
-/* .swiper {
-  width: 400px;
-  height: 600px;
-  border: 1px dashed red;
-} */
-
-/* mobile-statusBar */
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
